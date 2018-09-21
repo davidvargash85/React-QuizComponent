@@ -1,5 +1,7 @@
 // Importing the React library into the QuizQuestion component
 import React, { Component } from "react";
+// Importing QuizQuestionButton into the Quiz file
+import QuizQuestionButton from "./QuizQuestionButton";
  
 class QuizQuestion extends Component {
     constructor(props){
@@ -14,7 +16,7 @@ class QuizQuestion extends Component {
                 </section>
                 <section className="buttons">
                     <ul>
-                        <li><button>{this.props.quiz_question.answer_options[0]}</button></li>
+                        <QuizQuestionButton button_text={this.props.quiz_question.answer_options[0]} />
                     </ul>
                 </section>
             </main>
